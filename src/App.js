@@ -1,17 +1,13 @@
-import Footer from "./components/Footer";
-import Form from "./components/Form";
-import HeaderLogin from "./components/HeaderLogin";
-import Wrapper from "./components/Wrapper";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
-    <>
-      <Wrapper>
-        <HeaderLogin />
-        <Form />
-      </Wrapper>
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+    </Routes>
   );
 }
 
